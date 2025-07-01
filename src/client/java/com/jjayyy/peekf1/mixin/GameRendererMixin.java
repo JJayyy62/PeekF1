@@ -1,0 +1,41 @@
+package com.jjayyy.peekf1.mixin;
+
+import com.jjayyy.peekf1.client.PeekF1;
+import com.jjayyy.peekf1.client.HUDState;
+import net.minecraft.client.MinecraftClient;
+import net.minecraft.client.render.GameRenderer;
+import net.minecraft.client.render.RenderTickCounter;
+import org.spongepowered.asm.mixin.Final;
+import org.spongepowered.asm.mixin.Mixin;
+import org.spongepowered.asm.mixin.Shadow;
+import org.spongepowered.asm.mixin.injection.At;
+import org.spongepowered.asm.mixin.injection.Inject;
+import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
+
+@Mixin(value = GameRenderer.class)
+public class GameRendererMixin {
+    @Shadow
+    @Final
+    private MinecraftClient client;
+
+    // Doing it this way is for Optifine compatibility
+    @Inject(method = "renderWorld", at = @At("HEAD"))
+    private void onRenderHand1(RenderTickCounter tickCounter, CallbackInfo ci) {
+        if ((PeekF1.state.equals(HUDState.NO_HUD) || PeekF1.state.equals(HUDState.ALL_HIDDEN)) && PeekF1.isTemporaryShowHud()) {
+            client.options.hudHidden = false;
+        } else if (PeekF1.state.equals(HUDState.NO_HUD)) {
+            client.options.hudHidden = false;
+        }
+    }
+
+    @Inject(method = "renderWorld", at = @At("TAIL"))
+    private void onRenderHand2(CallbackInfo ci) {
+        if ((PeekF1.state.equals(HUDState.NO_HUD) || PeekF1.state.equals(HUDState.ALL_HIDDEN)) && PeekF1.isTemporaryShowHud()) {
+            client.options.hudHidden = false;
+        } else if (PeekF1.state.equals(HUDState.NO_HUD)) {
+            client.options.hudHidden = true;
+        } else if (PeekF1.state.equals(HUDState.ALL_HIDDEN)) {
+            client.options.hudHidden = true;
+        }
+    }
+}

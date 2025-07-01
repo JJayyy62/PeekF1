@@ -1,0 +1,6 @@
+{
+  "key.peekf1.show_hud": "Show HUD temporarily",
+  "category.peekf1": "PeekF1",
+  "modmenu.peekf1.name": "PeekF1",
+  "modmenu.peekf1.description": "Peek at your HUD using F1. Press the set key (default: L-Alt) to temporarily show HUD while hidden."
+} 

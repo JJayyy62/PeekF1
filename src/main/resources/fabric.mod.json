@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "peekf1",
+  "version": "${version}",
+  "name": "PeekF1",
+  "description": "If the peek key is pressed while the HUD is hidden, the HUD can be temporarily displayed.",
+  "authors": [
+    "UltimateBoomer",
+    "MovTery",
+    "JJayyy"
+  ],
+  "license": "MIT",
+  "icon": "assets/peekf1/icon.png",
+  "environment": "client",
+  "mixins": [
+    {
+      "config": "peekf1.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=0.7.4",
+    "minecraft": "~1.21"
+  },
+  "entrypoints": {
+    "client": [
+      "com.jjayyy.peekf1.client.PeekF1Client"
+    ]
+  }
+}
