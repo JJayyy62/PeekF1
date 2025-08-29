@@ -2,5 +2,9 @@
   "key.peekf1.show_hud": "一時的にHUDを表示",
   "category.peekf1": "PeekF1",
   "modmenu.peekf1.name": "PeekF1",
-  "modmenu.peekf1.description": "F1キーでHUDの表示を切り替えます。非表示時に設定したキー（デフォルト：L-Alt）を押している間、一時的にHUDを表示できます。"
-} 
+  "modmenu.peekf1.description": "F1キーでHUDの表示を切り替えます。非表示時に、設定したキーを押している間、一時的にHUDを表示できます。",
+  "peekf1.config.title": "PeekF1 設定",
+  "peekf1.config.hideBlockOutline": "ブロックアウトラインの表示: %s",
+  "peekf1.config.enabled": "表示",
+  "peekf1.config.disabled": "非表示"
+}

@@ -2,5 +2,9 @@
   "key.peekf1.show_hud": "Show HUD temporarily",
   "category.peekf1": "PeekF1",
   "modmenu.peekf1.name": "PeekF1",
-  "modmenu.peekf1.description": "Peek at your HUD using F1. Press the set key (default: L-Alt) to temporarily show HUD while hidden."
-} 
+  "modmenu.peekf1.description": "Peek at your HUD using F1. Press the set key to temporarily show HUD while hidden.",
+  "peekf1.config.title": "PeekF1 Setting",
+  "peekf1.config.hideBlockOutline": "Displaying Block Outlines: %s",
+  "peekf1.config.enabled": "Show",
+  "peekf1.config.disabled": "Hidden"
+}
