@@ -19,8 +19,8 @@
     }
   ],
   "depends": {
-    "fabricloader": ">=0.16.14",
-    "minecraft": "~1.21"
+    "fabricloader": "*",
+    "minecraft": ">=1.20 <1.21"
   },
   "suggests": {
     "modmenu": "*"
